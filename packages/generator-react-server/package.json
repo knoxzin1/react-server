@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "ava": "^0.14.0",
+    "cpy-cli": "^1.0.1",
     "nsp": "^2.3.3",
     "rimraf": "^2.5.2",
     "yeoman-assert": "^2.0.0",
@@ -38,7 +39,7 @@
   "repository": "redfin/react-server",
   "scripts": {
     "//": "Keep these in sync",
-    "prepublish": "cp ../../.eslintrc generators/app/templates/_eslintrc",
+    "prepublish": "cpy ../../.eslintrc generators/app/templates/_eslintrc",
     "test": "npm run ava && npm run lint && nsp check",
     "ava": "ava test --tap",
     "lint": "eslint generators/ test/",
